@@ -5,7 +5,6 @@
       shell:
         "uname -a"
       register: unameoutput
-      tag: unameoutput
 
     - name: Command output display
       debug:
