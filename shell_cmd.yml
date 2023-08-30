@@ -3,4 +3,9 @@
   tasks:
     - name: uname CMD
       shell:
-        cmd: uname -a
+        "uname -a"
+      register: unameoutput
+      tag: unameoutput
+
+    - debug:
+      msg="{{unameoutput.stdout}}"
