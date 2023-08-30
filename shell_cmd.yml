@@ -2,5 +2,5 @@
   hosts: all
   tasks:
     - name: uname CMD
-      ansible.buitin.shell:
+      shell:
         cmd: uname -a
