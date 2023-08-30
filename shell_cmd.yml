@@ -1,0 +1,6 @@
+- name: Shell Commands
+  hosts: all
+  tasks:
+    - name: uname CMD
+      ansible.buitin.shell:
+        cmd: uname -a
