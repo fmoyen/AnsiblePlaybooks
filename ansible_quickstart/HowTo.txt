@@ -1,1 +1,13 @@
+#######################################################################################################################
+Run a playbook with an inventory file
+
 ansible-playbook -i inventory.ini playbook.yaml
+
+
+#######################################################################################################################
+Run a playbook locally without an inventory file
+
+ansible-playbook -c local -i localhost, playbook.yaml
+
+(in "localhost," the "," tells the command that this is a list of hosts with only one host, and not an inventory file named "localhost")
+
