@@ -11,3 +11,23 @@ ansible-playbook -c local -i localhost, playbook.yaml
 
 (in "localhost," the "," tells the command that this is a list of hosts with only one host, and not an inventory file named "localhost")
 
+
+#######################################################################################################################
+Missing collection ==> how to install a collection
+
+[fabrice@fab4wca IA]$ ansible-playbook -c local -i localhost, cu1_stef.LSExplanation.ManualCorrections.yml 
+ERROR! couldn't resolve module/action 'community.general.read_csv'. This often indicates a misspelling, missing collection, or incorrect module path.
+
+==>
+
+[fabrice@fab4wca IA]$ ansible-galaxy collection install community.general
+
+Starting galaxy collection install process
+Process install dependency map
+Starting collection install process
+Downloading https://galaxy.ansible.com/api/v3/plugin/ansible/content/published/collections/artifacts/community-general-9.2.0.tar.gz to /home/fabrice/.ansible/tmp/ansible-local-356232ucgmh5r/tmp5ictagjs/community-general-9.2.0-rmupk5zd
+Installing 'community.general:9.2.0' to '/home/fabrice/.ansible/collections/ansible_collections/community/general'
+community.general:9.2.0 was installed successfully
+
+
+#######################################################################################################################
